@@ -1,0 +1,15 @@
+maxProduct = 0
+
+with open("data.txt") as Data:
+	numString = Data.readline()
+
+for i in range(((len(numString) - 12))):
+	product = int(numString[i])
+	
+	for x in range(1,13):
+		product *= int(numString[i +x])
+		
+	if product > maxProduct:
+		maxProduct = product
+	
+print(maxProduct)
